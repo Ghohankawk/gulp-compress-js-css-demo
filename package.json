@@ -1,0 +1,22 @@
+{
+  "name": "gulp demo",
+  "version": "1.0.0",
+  "description": "this is a demo for gulp compress js and css",
+  "main": "index.js",
+  "scripts": {
+    "start": "gulp default",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "hank",
+  "license": "MIT",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-clean": "^0.4.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-csso": "^3.0.1",
+    "gulp-notify": "^3.2.0",
+    "gulp-rename": "^1.2.2",
+    "gulp-rev": "^8.1.1",
+    "gulp-uglify": "^3.0.0"
+  }
+}
