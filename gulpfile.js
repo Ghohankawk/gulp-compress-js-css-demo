@@ -53,6 +53,17 @@ gulp.task('script', function () {
         .pipe(notify({message: 'js files have been processed'}));
 });
 
+var imageFiles = 'src/image/*';//从源文件移动到输出文件
+
+var imageOutputDir = 'dist/image';
+
+// 图片移动任务
+gulp.task('move', function () {
+    return gulp.src(imageFiles)    //引入所有image
+        .pipe(gulp.dest(imageOutputDir))      //输出
+        .pipe(notify({message: 'image files have been moved'}));
+});
+
 // 目标目录清理
 gulp.task('clean', function () {
     return gulp.src(['dist/'], {read: false})
@@ -62,5 +73,5 @@ gulp.task('clean', function () {
 
 // 预设任务，执行清理后，
 gulp.task('default', ['clean'], function () {
-    gulp.start('css', 'script');
+    gulp.start('css', 'script','move');
 });
